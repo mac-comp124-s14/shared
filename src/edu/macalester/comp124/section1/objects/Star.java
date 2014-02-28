@@ -1,6 +1,5 @@
-package edu.macalester.comp124.objects1;
+package edu.macalester.comp124.section1.objects;
 
-import acm.graphics.GOval;
 import acm.graphics.GRect;
 
 import java.awt.*;
@@ -8,7 +7,7 @@ import java.awt.*;
 /**
  * @author Shilad Sen
  */
-public class Star extends Shape {
+public class Star extends edu.macalester.comp124.section1.objects.Shape {
     public Star() {
         this(25);
     }

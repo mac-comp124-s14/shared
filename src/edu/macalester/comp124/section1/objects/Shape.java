@@ -1,4 +1,4 @@
-package edu.macalester.comp124.objects1;
+package edu.macalester.comp124.section1.objects;
 
 import acm.graphics.GCompound;
 import acm.graphics.GOval;

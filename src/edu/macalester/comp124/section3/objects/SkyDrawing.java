@@ -1,8 +1,7 @@
-package edu.macalester.comp124.objects3;
+package edu.macalester.comp124.section3.objects;
 
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
-import acm.util.RandomGenerator;
 
 import java.awt.*;
 

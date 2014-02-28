@@ -1,6 +1,5 @@
-package edu.macalester.comp124.objects3;
+package edu.macalester.comp124.section3.objects;
 
-import acm.graphics.GCompound;
 import acm.graphics.GOval;
 
 import java.awt.*;
