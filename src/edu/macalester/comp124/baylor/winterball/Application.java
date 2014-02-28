@@ -1,7 +1,6 @@
 package edu.macalester.comp124.baylor.winterball;
 
 import acm.program.ConsoleProgram;
-import sun.org.mozilla.javascript.internal.ast.ForLoop;
 
 import java.util.List;
 

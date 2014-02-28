@@ -45,7 +45,7 @@ public class Example
 
 	private List<String> getActions()
 	{
-		List<String> actions = new LinkedList<>();
+		List<String> actions = new LinkedList<String>();
 
 		actions.add("Give gift");
 		actions.add("Throw rocks");

@@ -15,7 +15,7 @@ public class Application
 	public void run()
 	{
 		//--- Old MacDonald had a farm...
-		List<Animal> farm = new ArrayList<>();
+		List<Animal> farm = new ArrayList<Animal>();
 		Animal a = new Lion();
 		farm.add(a);
 //		a = new Tiger();
