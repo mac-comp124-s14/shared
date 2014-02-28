@@ -46,7 +46,8 @@ public class RandomShapes extends GraphicsProgram {
 	 * Create and place a random collection of objects
 	 */
 	private void initializeObjects() {
-		// TODO: Step 1. intialize the gObject array with shape objects.
+		// TODO: Step 1. intialize the shapes array with GObject objects.
+        // Look for a helper method to make the GObjects
 
 		
 		// TODO: Step 2. add() each object in the array to this class,
