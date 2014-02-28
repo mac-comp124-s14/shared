@@ -13,4 +13,14 @@ abstract public class Feline
 	{
 		return "purrs";
 	}
+    @Override
+    public String giveCarrots()
+    {
+        return "turns up its nose!";
+    }
+    @Override
+    public String giveChocolate()
+    {
+        return "yum!";
+    }
 }

@@ -8,7 +8,15 @@ abstract public class Animal
 	{
 		this.species = species;
 	}
+    public String getSpecies(){
+        return this.species;
+    }
 
 	abstract public String pet();
 	abstract public String giveMeat();
+    abstract public String giveChocolate();
+    abstract public String giveCarrots();
+    abstract public String walk();
+    abstract public String wrestle();
+    abstract public String pickUp();
 }
