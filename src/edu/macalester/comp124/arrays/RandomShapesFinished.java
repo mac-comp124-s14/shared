@@ -18,7 +18,7 @@ import acm.util.RandomGenerator;
  * @author Shilad
  *
  */
-public class RandomShapes extends GraphicsProgram {
+public class RandomShapesFinished extends GraphicsProgram {
 	private static final int WIDTH = 500;
 	private static final int HEIGHT = 500;
 	
@@ -31,7 +31,8 @@ public class RandomShapes extends GraphicsProgram {
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 	
 	// TODO: Declare an array of 25 GObjects called "shapes" and
-	// allocate space for it using "new."
+	// allocate space for it using "new"
+	private GObject [] shapes = new GObject[25]; 	
 	
 	public void run() {
 		initializeObjects();
@@ -46,13 +47,18 @@ public class RandomShapes extends GraphicsProgram {
 	 * Create and place a random collection of objects
 	 */
 	private void initializeObjects() {
-		// TODO: Step 1. intialize the shapes array with GObject objects.
-        // Look for a helper method to make the GObjects
-
+		// TODO: intialize the gObject array with shape objects
+		for (int i = 0; i < shapes.length; i++) {
+			shapes[i] = createRandomShape();
+		}
 		
-		// TODO: Step 2. add() each object in the array to this class,
-		// specifying random x and y coordinates.
-
+		// TODO: add() each object in the array to this class, specifying
+		// random x and y coordinates
+		for (GObject o : shapes) {
+			int [] point = getRandomCoordinate();
+			add(o, point[0], point[1]);
+			pause(100);
+		}
 	}
 	
 	/**
@@ -60,6 +66,14 @@ public class RandomShapes extends GraphicsProgram {
 	 */
 	private void wiggleShapes() {
 		// TODO: loop over each shape and wiggle it.  Hint: move().
+		for (GObject o : shapes) {
+			int dx = rgen.nextInt(-3, 3);
+			int dy = rgen.nextInt(-3, 3);
+			o.move(2, dy);
+            if (o.getLocation().getX() > getWidth()) {
+                System.exit(0);
+            }
+		}
 	}
 	
 	/**
@@ -76,7 +90,7 @@ public class RandomShapes extends GraphicsProgram {
 		if (r == 0) {
 			return new GOval(w, h);
 		} else if (r == 1) {
-			return new G3DRect(w, h);
+			return new GRect(w, h);
 		} else if (r == 2) {
 			return new GLabel(getRandomString());
 		} else {
