@@ -97,7 +97,7 @@ public class Application
 
 	private void runIntDemo()
 	{
-		List<Integer> numbers  = new ArrayList<>();
+		List<Integer> numbers  = new ArrayList<Integer>();
 		int[]         numbers2 = new int[10];
 
 		for (int i = 0; i < 5; i++)
@@ -140,7 +140,7 @@ public class Application
 
 	private void runListDemo()
 	{
-		List<MythicalAnimal> zoo = new ArrayList<>();
+		List<MythicalAnimal> zoo = new ArrayList<MythicalAnimal>();
 
 		zoo.add( new Unicorn  ("Alice")    );
 		zoo.add( new Puppycorn("Bob")      );

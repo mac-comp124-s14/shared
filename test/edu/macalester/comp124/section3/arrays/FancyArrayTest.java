@@ -38,6 +38,7 @@ public class FancyArrayTest {
     @Test
     public void testSet() {
         FancyArray array = new FancyArray();
+
         array.add("Dog");
         array.add("Cat");
         assertEquals(2, array.getLength());
