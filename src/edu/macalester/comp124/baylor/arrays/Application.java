@@ -4,6 +4,7 @@ import acm.program.ConsoleProgram;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Application
 	extends ConsoleProgram
@@ -14,7 +15,47 @@ public class Application
 //		runArrayDemo();
 //		runIntDemo();
 //		runGridDemo();
-		runMapDemo();
+//		runMapDemo();
+		playPinTheTailOnTheDonkey();
+	}
+
+	private void playPinTheTailOnTheDonkey()
+	{
+		//--- Create a map
+		int width = 40, height=10;
+		Map theMap = new Map(width, height);
+
+		//--- Hide something on the map
+		Random dice = new Random();
+		theMap.objectX = dice.nextInt(width);
+		theMap.objectY = dice.nextInt(height);
+
+		//--- Put the player on the map
+		theMap.setPlayerLocation(dice.nextInt(width), dice.nextInt(height));
+
+		//--- While the something isn't found
+		println(theMap);
+		boolean gameOver = false;
+		while (!gameOver)
+		{
+			//--- Ask player where to go
+			char direction = readChar("Move? (n,s,e,w) ");
+
+			//--- Move the player
+			theMap.movePlayer(direction);
+
+			//--- Draw the map
+			println(theMap);
+
+			//--- Tell them how they're doing
+
+			//--- See if they won
+			if (theMap.objectFound())
+			{
+				println("You win!");
+				gameOver = true;
+			}
+		}
 	}
 
 	private void runMapDemo()
