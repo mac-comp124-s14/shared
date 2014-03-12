@@ -90,7 +90,7 @@ public class Map
 			{
 				output += map[x][y];
 			}
-			output += System.lineSeparator();
+			output += System.getProperty("line.separator");
 		}
 		return output;
 	}

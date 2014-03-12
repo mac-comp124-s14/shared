@@ -45,7 +45,7 @@ public class Application
 
 	private Map<String, Integer> getUserInfo()
 	{
-		Map<String, Integer> answers = new HashMap<>();
+		Map<String, Integer> answers = new HashMap<String, Integer>();
 
 		System.out.println("On a scale of 1-100, where do you rate for:");
 
@@ -84,7 +84,7 @@ public class Application
 
 	private List<Neighbor> getHogwartsColleges()
 	{
-		List<Neighbor> options = new LinkedList<>();
+		List<Neighbor> options = new LinkedList<Neighbor>();
 		Neighbor option;
 
 		option = new Neighbor();

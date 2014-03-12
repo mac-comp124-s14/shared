@@ -11,7 +11,7 @@ public class Neighbor
 {
 	public String name;
 	public String description;
-	public Map<String, Integer> attributes = new HashMap<>();
+	public Map<String, Integer> attributes = new HashMap<String, Integer>();
 
 	public float getDistance(Map<String, Integer> theirAttributes)
 	{

@@ -13,7 +13,7 @@ public class Application
 {
 	public void run()
 	{
-		Map<String,Integer> grades = new HashMap<>();
+		Map<String,Integer> grades = new HashMap<String, Integer>();
 		grades.put("Arya", 100);
 		grades.put("Brienne", 95);
 		grades.put("Catlan", 75);
