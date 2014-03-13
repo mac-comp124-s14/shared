@@ -11,6 +11,8 @@ import java.awt.event.MouseEvent;
  */
 public class PostalService extends GraphicsProgram {
 
+    GObject clickedObj = null;
+
     public void run() {
         RandomGenerator random = new RandomGenerator();
         for (int i = 0; i < 30; i++) {
@@ -20,11 +22,30 @@ public class PostalService extends GraphicsProgram {
                 random.nextInt(getHeight()));
         }
         addMouseListeners();
+        animate();
+    }
+
+    private void animate() {
+        while (true) {
+            if (clickedObj != null) {
+                GObject gobj = clickedObj;
+                clickedObj = null;
+                disappearObject(gobj);
+            }
+            pause(100);
+        }
+    }
+
+    private void disappearObject(GObject obj) {
+        // animated the clicked object
+        while (obj.getX() < getWidth() && obj.getY() + obj.getHeight() > 0) {
+            obj.move(1.0, -1.0);
+            pause(3);
+        }
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        GObject object = getElementAt(e.getX(), e.getY());
-        remove(object);
+        clickedObj = getElementAt(e.getX(), e.getY());
     }
 }
