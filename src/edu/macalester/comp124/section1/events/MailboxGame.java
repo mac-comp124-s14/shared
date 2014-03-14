@@ -1,6 +1,7 @@
 package edu.macalester.comp124.section1.events;
 
 import acm.graphics.GObject;
+import acm.graphics.GPoint;
 import acm.program.GraphicsProgram;
 
 import java.awt.event.MouseEvent;
@@ -9,6 +10,8 @@ import java.awt.event.MouseEvent;
  * @author Shilad Sen
  */
 public class MailboxGame extends GraphicsProgram {
+    private GPoint clickedPoint = null;
+
     public void run() {
         for (int i = 0; i < 3; i++) {
             Mailbox mailbox = new Mailbox();
@@ -16,18 +19,27 @@ public class MailboxGame extends GraphicsProgram {
         }
 
         addMouseListeners();
+        animateLoop();
+    }
 
+    private void animateLoop() {
         while (true) {
+            if (clickedPoint != null) {
+                GObject target = getElementAt(clickedPoint);
+                if (target != null) {
+                    for (int i = 0; i < 10; i++) {
+                        target.move(5, -5);
+                        pause(100);
+                    }
+                }
+                clickedPoint = null;
+            }
             pause(100);
         }
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        GObject target = getElementAt(e.getX(), e.getY());
-        println("point is " + e.getX() + ", " + e.getY());
-        println("screen point is " + e.getXOnScreen() + ", " + e.getYOnScreen());
-        println("target is " + target);
-        target.setLocation(e.getX(), e.getY());
+        clickedPoint = new GPoint(e.getX(), e.getY());
     }
 }
