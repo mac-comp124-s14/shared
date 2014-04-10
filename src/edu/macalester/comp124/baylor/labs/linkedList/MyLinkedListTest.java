@@ -12,7 +12,7 @@ public class MyLinkedListTest
 	@Test
 	public void testAddAndGetHead()
 	{
-		MyLinkedList<String> list = new MyLinkedList<>();
+		MyLinkedList<String> list = new MyLinkedList<String>();
 		list.add("A");
 		String expected = "A";
 		String actual   = list.get(0);
@@ -22,7 +22,7 @@ public class MyLinkedListTest
 	@Test
 	public void testAddAndGetMiddle()
 	{
-		MyLinkedList<String> list = new MyLinkedList<>();
+		MyLinkedList<String> list = new MyLinkedList<String>();
 		list.add("A");
 		list.add("B");
 		list.add("C");
@@ -46,7 +46,7 @@ public class MyLinkedListTest
 	@Test
 	public void testAddAndGetTail()
 	{
-		MyLinkedList<String> list = new MyLinkedList<>();
+		MyLinkedList<String> list = new MyLinkedList<String>();
 		list.add("A");
 		list.add("B");
 		list.add("C");
@@ -75,7 +75,7 @@ public class MyLinkedListTest
 	@Test
 	public void testInsertEnd()
 	{
-		MyLinkedList<String> list = new MyLinkedList<>();
+		MyLinkedList<String> list = new MyLinkedList<String>();
 		list.add("A");
 		list.add("B");
 		list.add("C");

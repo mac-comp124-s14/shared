@@ -417,7 +417,7 @@ public class DestructiveListTest
 	//<editor-fold defaultstate="collapsed" desc="sample data">
 	private DestructiveList<String> getSampleListSize2()
 	{
-		DestructiveList<String> instance = new DestructiveList<>();
+		DestructiveList<String> instance = new DestructiveList<String>();
 		instance.add("A");
 		instance.add("B");
 		return instance;
@@ -425,7 +425,7 @@ public class DestructiveListTest
 
 	private DestructiveList<String> getSampleListSize3()
 	{
-		DestructiveList<String> instance = new DestructiveList<>();
+		DestructiveList<String> instance = new DestructiveList<String>();
 		instance.add("A");
 		instance.add("B");
 		instance.add("C");
@@ -434,7 +434,7 @@ public class DestructiveListTest
 
 	private DestructiveList<String> getSampleListSize16()
 	{
-		DestructiveList<String> instance = new DestructiveList<>();
+		DestructiveList<String> instance = new DestructiveList<String>();
 		instance.add("A");
 		instance.add("B");
 		instance.add("C");
@@ -456,7 +456,7 @@ public class DestructiveListTest
 
 	private DestructiveList<String> getSampleListSize17()
 	{
-		DestructiveList<String> instance = new DestructiveList<>();
+		DestructiveList<String> instance = new DestructiveList<String>();
 		instance.add("A");
 		instance.add("B");
 		instance.add("C");
@@ -479,7 +479,7 @@ public class DestructiveListTest
 
 	private DestructiveList<String> getGroupList3s()
 	{
-		DestructiveList<String> instance = new DestructiveList<>();
+		DestructiveList<String> instance = new DestructiveList<String>();
 
 		instance.add("A");
 		instance.add("A");
@@ -504,7 +504,7 @@ public class DestructiveListTest
 
 	private DestructiveList<String> getNestedGroupsList()
 	{
-		DestructiveList<String> instance = new DestructiveList<>();
+		DestructiveList<String> instance = new DestructiveList<String>();
 
 		instance.add("A");
 		instance.add("A");
