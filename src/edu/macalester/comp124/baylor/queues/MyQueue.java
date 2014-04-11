@@ -13,7 +13,7 @@ public class MyQueue<T>
 
 	public void push(T item)
 	{
-		ListNode<T> newNode = new ListNode<>(item);
+		ListNode<T> newNode = new ListNode<T>(item);
 		if (null == head)
 		{
 			head = newNode;

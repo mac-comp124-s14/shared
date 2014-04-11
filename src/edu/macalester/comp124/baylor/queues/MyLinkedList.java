@@ -9,7 +9,7 @@ public class MyLinkedList<T>
 
 	public void add(T item)
 	{
-		ListNode<T> newNode = new ListNode<>(item);
+		ListNode<T> newNode = new ListNode<T>(item);
 		if (null == head)
 		{
 			head = newNode;

@@ -17,7 +17,7 @@ public class Application
 
 	private void runStackDemo()
 	{
-		MyStack<String> stack = new MyStack<>();
+		MyStack<String> stack = new MyStack<String>();
 		stack.push("Alice");
 		stack.push("Bob");
 		stack.push("Carol");
@@ -33,7 +33,7 @@ public class Application
 
 	private void runQueueDemo()
 	{
-		MyQueue<String> queue = new MyQueue<>();
+		MyQueue<String> queue = new MyQueue<String>();
 		queue.push("Alice");
 		queue.push("Bob");
 		queue.push("Carol");
@@ -49,7 +49,7 @@ public class Application
 
 	private void runLinkedListDemo()
 	{
-		MyLinkedList<String> list = new MyLinkedList<>();
+		MyLinkedList<String> list = new MyLinkedList<String>();
 		list.add("Alice");
 		list.add("Bob");
 		list.add("Carol");
