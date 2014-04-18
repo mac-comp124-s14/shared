@@ -1,6 +1,5 @@
 package edu.macalester.comp124.section3.binarytrees;
 
-import edu.macalester.comp124.section1.binarytrees.Tree;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

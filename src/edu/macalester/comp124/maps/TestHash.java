@@ -43,6 +43,10 @@ public class TestHash {
     }
 
     private static int myHashCode(String s) {
-        return s.hashCode();
+        int h = 17;
+        for (char c : s.toCharArray()) {
+            h = h * 37 + c;
+        }
+        return h;
     }
 }
