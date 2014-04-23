@@ -35,22 +35,6 @@ public class PrefixNode {
     public boolean isNumber() {
         return  !"*+-/".contains(symbol);
     }
-
-    public int evaluate() {
-        if (isNumber()) {
-            return Integer.valueOf(symbol);
-        } else if (symbol.equals("*")) {
-            return left.evaluate() * right.evaluate();
-        } else if (symbol.equals("+")) {
-            return left.evaluate() + right.evaluate();
-        } else if (symbol.equals("/")) {
-            return left.evaluate() / right.evaluate();
-        } else if (symbol.equals("-")) {
-            return left.evaluate() - right.evaluate();
-        } else {
-            throw new IllegalArgumentException("Invalid symbol: " + symbol);
-        }
-    }
 }
 
 

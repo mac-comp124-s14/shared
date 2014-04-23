@@ -1,40 +1,41 @@
 package edu.macalester.comp124.section1.binarytrees;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * @author Shilad Sen
  */
 public class PrefixTree {
-    private Node root = null;
+    private PrefixNode root = null;
 
-    public PrefixTree() {}
-
-    public void  insert(String value) {
-        Node newNode = new Node(value);
-        if (root == null) {
-            root = newNode;
-            return;
+    public PrefixTree(String expression) {
+        List<String> tokenQueue = new ArrayList<String>();
+        for (String token : expression.split(" ")) {
+            tokenQueue.add(token);
         }
-        Node node = root;
-        while (true) {
-            if (value.compareTo(node.getValue()) < 0) {
-                if (node.getLeft() == null) {
-                    node.setLeft(newNode);
-                    break;
-                }
-                node = node.getLeft();
-            } else if (value.compareTo(node.getValue()) > 0) {
-                if (node.getRight() == null) {
-                    node.setRight(newNode);
-                    break;
-                }
-                node = node.getRight();
-            } else {
-                break;
-            }
+        root = parse(tokenQueue);
+    }
+
+    private PrefixNode parse(List<String> tokenQueue) {
+        String token = tokenQueue.remove(0);
+        PrefixNode node = new PrefixNode(token);
+        if (node.isNumber()) {
+            return node;
+        } else {
+            node.setLeft(parse(tokenQueue));
+            node.setRight(parse(tokenQueue));
+            return node;
         }
     }
 
-    public Node getRoot() {
-        return root;
+    public int evaluate() {
+        return root.evaluate();
+    }
+
+    public static void main(String args[]) {
+        PrefixTree tree = new PrefixTree("+ * 2 A 3");
+        System.out.println("result is " + tree.evaluate());
     }
 }

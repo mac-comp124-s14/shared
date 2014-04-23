@@ -21,6 +21,18 @@ public class TestTree {
         assertEquals("Now", tree.getRoot().getValue());
     }
 
+    @Test
+    public void testCount() {
+        Tree tree = new Tree();
+        for (String word : "now is the time for all good men to come to the aid of their country".split(" ")) {
+            tree.insert(word);
+        }
+        int n = tree.count();
+        assertEquals(14, n);
+
+        tree.inorder();
+    }
+
     /**
      */
     @Test

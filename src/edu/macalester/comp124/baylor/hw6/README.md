@@ -14,7 +14,7 @@ DestructiveList<T>
 + removeEvery	
   removeEvery(3) will remove every 3rd element (i.e., nodes 2, 5, 8, etc.). If a starting index is passed in, start counting from that node. removeEvery(2,3) will remove every 2nd node starting from node 3  (i.e., nodes 4, 6, 8, etc.).
 + removeGroupsOf	
-  If several nodes in a row have the same value (as measured by toString()), they form a group. removeGroupsOf(3) will remove any group that has at least 3 nodes. Once the group has been removed, start looking for the next group starting from the next node, continuing until you reach the end of the list. Returns the number of groups removed.
+  If several nodes in a row have the same symbol (as measured by toString()), they form a group. removeGroupsOf(3) will remove any group that has at least 3 nodes. Once the group has been removed, start looking for the next group starting from the next node, continuing until you reach the end of the list. Returns the number of groups removed.
 + persistentlyRemoveGroupsOf	
   Remove all groups of the specified size. This might create new groups. For example, in
     AABBBA
