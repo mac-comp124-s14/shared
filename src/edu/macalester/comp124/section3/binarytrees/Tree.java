@@ -65,14 +65,11 @@ public class Tree {
         return count(root);
     }
     private int count(Node node) {
-        System.out.println("calling count on " + node);
         if (node == null) {
             return 0;
         }
         int nl = count(node.getLeft());
-        System.out.println("nl is " + nl);
         int nr = count(node.getRight());
-        System.out.println("nr is " + nr);
         return nl + nr + 1;
     }
 

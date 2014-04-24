@@ -35,6 +35,10 @@ public class PrefixNode {
     public boolean isNumber() {
         return  !"*+-/".contains(symbol);
     }
+
+    public int evaluate() {
+        return 0;
+    }
 }
 
 
